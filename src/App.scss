@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$font-family: 'Poppins', sans-serif;
+$primary-color: #94928e;
+$background-color: #595C56;
+$text-color: #fff;
+$border-radius: 50px;
+$placeholder-color: #ffffff;
+$completed-color: #ffffff;
+$padding: 0.5rem 1rem;
+$margin-bottom: 1rem;
+
+* {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: $text-color;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.TodoWrapper {
+  background: $background-color;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: $border-radius;
+}
+
+.TodoForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid $primary-color;
+  padding: $padding;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: $text-color;
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}
+
+.todo-btn {
+  background: $primary-color;
+  color: $text-color;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $primary-color;
+  color: $text-color;
+  padding: 0.75rem 1rem;
+  border-radius: $border-radius;
+  margin-bottom: $margin-bottom;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: $text-color;
+  cursor: pointer;
+}
+
+.completed {
+  color: $completed-color;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+}
