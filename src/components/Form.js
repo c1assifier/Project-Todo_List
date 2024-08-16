@@ -1,31 +1,44 @@
-import React, {useState} from "react"
+import React, { useState } from "react";
+import Button from "./Button";
 
+const Form = ({ addTodo }) => {
 
-const Form = ({addTodo}) => {
+  const [value, setValue] = useState("");
+  const [isInputValid, setIsInputValid] = useState(true);
 
-  const [value, setValue] = useState("")
-  
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    addTodo(value)
-    
-    setValue("")
-  }
+    if (value.trim().length === 0) {
+      setIsInputValid(false);
+      return setValue("");
+    }
+
+    addTodo(value);
+    setValue("");
+  };
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    if (e.target.value.trim().length > 0) {
+      setIsInputValid(true); // Сбрасываем ошибку ввода при вводе текста
+    }
+  };
+
+
 
   return (
     <form className="TodoForm" onSubmit={handleSubmit}>
       <input
         type="text"
-        className="todo-input"
+        className={`todo-input ${!isInputValid ? 'invalid' : ''}`}
         value={value}
         placeholder="Write the task..."
-        onChange={(e) => setValue(e.target.value)}
+        onChange={handleChange}
       />
-
-      <button type="submit" className="todo-btn">Add</button>
+      <Button type="submit">Add</Button>
     </form>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

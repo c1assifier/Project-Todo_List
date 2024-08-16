@@ -34,6 +34,7 @@ h1 {
   font-size: 1.75rem;
 }
 
+
 .TodoWrapper {
   background: $background-color;
   margin-top: 5rem;
@@ -59,14 +60,6 @@ h1 {
   &::placeholder {
     color: $placeholder-color;
   }
-}
-
-.todo-btn {
-  background: $primary-color;
-  color: $text-color;
-  border: none;
-  padding: 0.55rem;
-  cursor: pointer;
 }
 
 .Todo {
@@ -98,4 +91,9 @@ h1 {
 .edit-icon,
 .delete-icon {
   cursor: pointer;
+}
+
+.invalid {
+  border-color: red;
+  background: salmon;
 }
