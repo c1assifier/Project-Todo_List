@@ -5,16 +5,18 @@ import Todo from "./Todo";
 import EditForm from "./EditForm";
 uuidv4();
 
-const Wrapper = () => {
+const Wrapper = (setIsInputValid) => {
   const [todos, setTodos] = useState([]);
-
+  
   const addTodo = (todo) => {
+
     setTodos([
       ...todos,
       { id: uuidv4(), task: todo, completed: false, isEditing: false },
     ]);
-    console.log(todos);
   };
+
+
 
   const toggleComplete = (id) => {
     setTodos(
@@ -54,7 +56,9 @@ const Wrapper = () => {
 
   return (
     <div className="TodoWrapper">
+      
       <h1>Make your list!</h1>
+
 
       <Form addTodo={addTodo} />
 
