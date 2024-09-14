@@ -2,6 +2,7 @@
   "name": "yt-todo_list_react_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://c1assifier.github.io/Project-Todo_List/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
@@ -25,6 +26,7 @@
     "@babel/preset-react": "^7.24.7",
     "babel-loader": "^8.3.0",
     "css-loader": "^6.7.2",
+    "gh-pages": "^6.1.1",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.77.8",
     "sass-loader": "^13.3.3",
@@ -37,7 +39,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
