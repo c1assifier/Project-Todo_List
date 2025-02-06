@@ -8,7 +8,7 @@
 
 ## 🚀 Демо
 
-[Посмотреть демо](https://c1assifier.github.io/Project-Todo_List/)
+🔗 [Посмотреть демо](https://c1assifier.github.io/Project-Todo_List/)
 
 ---
 
